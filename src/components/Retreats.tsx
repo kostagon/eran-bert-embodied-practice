@@ -1,7 +1,9 @@
 import ScrollReveal from "./ScrollReveal";
 import retreatImage from "@/assets/retreat-space.jpg";
+import { useSiteContent } from "@/hooks/useSiteContent";
 
 const Retreats = () => {
+  const { t } = useSiteContent();
   return (
     <section className="py-24 md:py-40 overflow-hidden">
       {/* Full-width image */}
@@ -25,7 +27,7 @@ const Retreats = () => {
 
           <ScrollReveal delay={0.1}>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground mb-8">
-              ריטריטים
+              {t("retreats.title", "ריטריטים")}
             </h2>
           </ScrollReveal>
 

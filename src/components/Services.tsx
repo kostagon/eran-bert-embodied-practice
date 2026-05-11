@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ScrollReveal from "./ScrollReveal";
+import { useSiteContent } from "@/hooks/useSiteContent";
 
 const services = [
   {
@@ -27,6 +28,7 @@ const services = [
 
 const Services = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const { t } = useSiteContent();
 
   return (
     <section id="services" className="py-24 md:py-40 section-padding">
@@ -34,7 +36,7 @@ const Services = () => {
         <div className="mb-16 md:mb-24">
           <div className="editorial-divider mb-8" />
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground">
-            שירותים
+            {t("services.title", "שירותים")}
           </h2>
         </div>
       </ScrollReveal>
