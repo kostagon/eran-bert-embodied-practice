@@ -1,7 +1,9 @@
 import ScrollReveal from "./ScrollReveal";
 import handsImage from "@/assets/hands-detail.jpg";
+import { useSiteContent } from "@/hooks/useSiteContent";
 
 const Intro = () => {
+  const { t } = useSiteContent();
   return (
     <section id="intro" className="py-24 md:py-40 section-padding">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
@@ -13,7 +15,7 @@ const Intro = () => {
 
           <ScrollReveal delay={0.1}>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl leading-snug mb-8 text-foreground">
-              הקשר בין גוף לתודעה הוא לא רעיון — הוא חוויה
+              {t("intro.title", "הקשר בין גוף לתודעה הוא לא רעיון — הוא חוויה")}
             </h2>
           </ScrollReveal>
 
@@ -36,7 +38,7 @@ const Intro = () => {
           <ScrollReveal delay={0.4}>
             <blockquote className="border-r-2 border-accent/40 pr-6 py-2">
               <p className="font-display text-xl md:text-2xl text-foreground/80 italic leading-relaxed">
-                ״הניצחון האמיתי הוא הניצחון על עצמך״
+                {t("intro.quote", "״הניצחון האמיתי הוא הניצחון על עצמך״")}
               </p>
             </blockquote>
           </ScrollReveal>
