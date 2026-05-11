@@ -1,4 +1,5 @@
 import ScrollReveal from "./ScrollReveal";
+import { useSiteContent } from "@/hooks/useSiteContent";
 
 const pillars = [
   {
@@ -20,13 +21,14 @@ const pillars = [
 ];
 
 const Philosophy = () => {
+  const { t } = useSiteContent();
   return (
     <section id="philosophy" className="py-24 md:py-40 section-padding bg-card">
       <ScrollReveal>
         <div className="mb-16 md:mb-24">
           <div className="editorial-divider mb-8" />
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground">
-            פילוסופיה
+            {t("philosophy.title", "פילוסופיה")}
           </h2>
         </div>
       </ScrollReveal>

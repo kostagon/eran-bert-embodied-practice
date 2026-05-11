@@ -1,5 +1,6 @@
 import ScrollReveal from "./ScrollReveal";
 import oceanImage from "@/assets/ocean-presence.jpg";
+import { useSiteContent } from "@/hooks/useSiteContent";
 
 const audiences = [
   "אנשי ביצוע",
@@ -10,6 +11,7 @@ const audiences = [
 ];
 
 const Performance = () => {
+  const { t } = useSiteContent();
   return (
     <section className="py-24 md:py-40 section-padding">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
@@ -34,7 +36,7 @@ const Performance = () => {
 
           <ScrollReveal delay={0.1}>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground mb-6">
-              ביצועים תחת לחץ
+              {t("performance.title", "ביצועים תחת לחץ")}
             </h2>
           </ScrollReveal>
 

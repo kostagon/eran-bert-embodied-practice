@@ -3,8 +3,15 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { AuthProvider } from "@/hooks/useAuth";
+import { SiteContentProvider } from "@/hooks/useSiteContent";
 import Index from "./pages/Index.tsx";
 import NotFound from "./pages/NotFound.tsx";
+import Auth from "./pages/Auth.tsx";
+import AdminContent from "./pages/admin/AdminContent.tsx";
+import AdminPrograms from "./pages/admin/AdminPrograms.tsx";
+import AdminBlog from "./pages/admin/AdminBlog.tsx";
+import BlogIndex, { BlogPostPage } from "./pages/Blog.tsx";
 
 const queryClient = new QueryClient();
 
@@ -14,11 +21,20 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <AuthProvider>
+          <SiteContentProvider>
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/blog" element={<BlogIndex />} />
+              <Route path="/blog/:slug" element={<BlogPostPage />} />
+              <Route path="/auth" element={<Auth />} />
+              <Route path="/admin" element={<AdminContent />} />
+              <Route path="/admin/programs" element={<AdminPrograms />} />
+              <Route path="/admin/blog" element={<AdminBlog />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </SiteContentProvider>
+        </AuthProvider>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
