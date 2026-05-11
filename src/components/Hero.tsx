@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
 import heroImage from "@/assets/hero-movement.jpg";
+import { useSiteContent } from "@/hooks/useSiteContent";
 
 const Hero = () => {
+  const { t } = useSiteContent();
   return (
     <section className="relative min-h-screen flex items-end pb-20 md:pb-30 overflow-hidden">
       {/* Background image with parallax */}
@@ -26,7 +28,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
           >
-            ערן ברט — תרגול, תנועה, לחימה, מודעות
+            {t("hero.title", "ערן ברט — תרגול, תנועה, לחימה, מודעות")}
           </motion.h1>
 
           <motion.p
@@ -35,7 +37,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
           >
-            ללמוד להתעגן בעצמי — תנועה, נשימה ולחימה ככלים לחוסן, ויסות ונוכחות.
+            {t("hero.subtitle", "ללמוד להתעגן בעצמי — תנועה, נשימה ולחימה ככלים לחוסן, ויסות ונוכחות.")}
           </motion.p>
 
           <motion.p
@@ -44,7 +46,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.65, ease: [0.22, 1, 0.36, 1] }}
           >
-            אימון, ליווי והכשרה המשלבים אומנויות לחימה, עבודה סומטית ומודעות גופנית לפיתוח יציבות, בהירות ונוכחות.
+            {t("hero.description", "אימון, ליווי והכשרה המשלבים אומנויות לחימה, עבודה סומטית ומודעות גופנית.")}
           </motion.p>
 
           <motion.div
@@ -57,13 +59,13 @@ const Hero = () => {
               href="#contact"
               className="inline-block bg-foreground text-primary-foreground px-8 py-3.5 text-sm font-body tracking-wide hover:bg-charcoal-light transition-colors duration-300"
             >
-              צור קשר
+              {t("hero.cta_primary", "צור קשר")}
             </a>
             <a
               href="#programs"
               className="inline-block border border-foreground/30 text-foreground px-8 py-3.5 text-sm font-body tracking-wide hover:border-foreground transition-colors duration-300"
             >
-              לתוכניות והכשרות
+              {t("hero.cta_secondary", "לתוכניות והכשרות")}
             </a>
           </motion.div>
         </div>
