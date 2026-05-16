@@ -1,5 +1,7 @@
 import { createContext, useContext, useEffect, useState, ReactNode, useCallback } from "react";
 import { supabase } from "@/integrations/supabase/client";
+import { translations } from "@/i18n/translations";
+import { useLanguage } from "@/hooks/useLanguage";
 
 type ContentMap = Record<string, string>;
 
@@ -11,6 +13,7 @@ const Ctx = createContext<{
 }>({ content: {}, t: (_k, f) => f ?? "", refresh: async () => {}, loading: true });
 
 export const SiteContentProvider = ({ children }: { children: ReactNode }) => {
+  const { lang } = useLanguage();
   const [content, setContent] = useState<ContentMap>({});
   const [loading, setLoading] = useState(true);
 
@@ -24,7 +27,16 @@ export const SiteContentProvider = ({ children }: { children: ReactNode }) => {
 
   useEffect(() => { refresh(); }, [refresh]);
 
-  const t = useCallback((key: string, fallback = "") => content[key] ?? fallback, [content]);
+  // Resolution order:
+  // - English: dictionary[en][key] → CMS value → fallback
+  // - Hebrew: CMS value → dictionary[he][key] → fallback
+  const t = useCallback(
+    (key: string, fallback = "") => {
+      if (lang === "en") return translations.en[key] ?? content[key] ?? translations.he[key] ?? fallback;
+      return content[key] ?? translations.he[key] ?? fallback;
+    },
+    [content, lang]
+  );
 
   return <Ctx.Provider value={{ content, t, refresh, loading }}>{children}</Ctx.Provider>;
 };

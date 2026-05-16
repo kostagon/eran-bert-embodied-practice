@@ -5,8 +5,8 @@ import Philosophy from "@/components/Philosophy";
 import Services from "@/components/Services";
 import Programs from "@/components/Programs";
 import Performance from "@/components/Performance";
+import BlogShowcase from "@/components/BlogShowcase";
 import Retreats from "@/components/Retreats";
-import BlogPreview from "@/components/BlogPreview";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -20,8 +20,8 @@ const Index = () => {
       <Services />
       <Programs />
       <Performance />
+      <BlogShowcase />
       <Retreats />
-      <BlogPreview />
       <Contact />
       <Footer />
     </div>

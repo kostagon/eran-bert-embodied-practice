@@ -7,14 +7,14 @@ const Footer = () => {
       <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
         <div>
           <span className="font-display text-sm tracking-[0.25em] text-foreground">
-            {t("footer.brand", "ERAN BERT")}
+            {t("footer.brand")}
           </span>
           <p className="font-body text-xs text-muted-foreground/60 mt-2">
-            {t("footer.tagline", "תרגול · תנועה · לחימה · מודעות")}
+            {t("footer.tagline")}
           </p>
         </div>
         <div className="font-body text-xs text-muted-foreground/40">
-          © {new Date().getFullYear()} ערן ברט. כל הזכויות שמורות.
+          © {new Date().getFullYear()} — {t("footer.brand")} · {t("footer.rights")}
         </div>
       </div>
     </footer>

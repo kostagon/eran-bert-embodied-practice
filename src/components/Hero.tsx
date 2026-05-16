@@ -1,12 +1,14 @@
 import { motion } from "framer-motion";
 import heroImage from "@/assets/hero-movement.jpg";
 import { useSiteContent } from "@/hooks/useSiteContent";
+import { useLanguage } from "@/hooks/useLanguage";
 
 const Hero = () => {
   const { t } = useSiteContent();
+  const { isRTL } = useLanguage();
+
   return (
     <section className="relative min-h-screen flex items-end pb-20 md:pb-30 overflow-hidden">
-      {/* Background image with parallax */}
       <motion.div
         className="absolute inset-0 z-0"
         initial={{ scale: 1.1 }}
@@ -21,14 +23,14 @@ const Hero = () => {
       </motion.div>
 
       <div className="relative z-10 section-padding w-full">
-        <div className="max-w-4xl mr-0 ml-auto md:mr-0 md:ml-auto lg:mr-0">
+        <div className="max-w-4xl">
           <motion.h1
-            className="font-display text-4xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight mb-6 text-foreground"
+            className="font-display text-4xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight mb-6 text-foreground text-balance"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
           >
-            {t("hero.title", "ערן ברט — תרגול, תנועה, לחימה, מודעות")}
+            {t("hero.title")}
           </motion.h1>
 
           <motion.p
@@ -37,7 +39,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
           >
-            {t("hero.subtitle", "ללמוד להתעגן בעצמי — תנועה, נשימה ולחימה ככלים לחוסן, ויסות ונוכחות.")}
+            {t("hero.subtitle")}
           </motion.p>
 
           <motion.p
@@ -46,7 +48,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.65, ease: [0.22, 1, 0.36, 1] }}
           >
-            {t("hero.description", "אימון, ליווי והכשרה המשלבים אומנויות לחימה, עבודה סומטית ומודעות גופנית.")}
+            {t("hero.description")}
           </motion.p>
 
           <motion.div
@@ -57,15 +59,16 @@ const Hero = () => {
           >
             <a
               href="#contact"
-              className="inline-block bg-foreground text-primary-foreground px-8 py-3.5 text-sm font-body tracking-wide hover:bg-charcoal-light transition-colors duration-300"
+              className="inline-flex items-center gap-3 bg-foreground text-primary-foreground px-8 py-3.5 text-sm font-body tracking-wide hover:bg-charcoal-light transition-colors duration-300"
             >
-              {t("hero.cta_primary", "צור קשר")}
+              <span>{t("hero.cta_primary")}</span>
+              <span aria-hidden>{isRTL ? "←" : "→"}</span>
             </a>
             <a
               href="#programs"
-              className="inline-block border border-foreground/30 text-foreground px-8 py-3.5 text-sm font-body tracking-wide hover:border-foreground transition-colors duration-300"
+              className="inline-flex items-center gap-3 border border-foreground/30 text-foreground px-8 py-3.5 text-sm font-body tracking-wide hover:border-foreground transition-colors duration-300"
             >
-              {t("hero.cta_secondary", "לתוכניות והכשרות")}
+              {t("hero.cta_secondary")}
             </a>
           </motion.div>
         </div>
