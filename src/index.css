@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700&family=Heebo:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700&family=Heebo:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -56,8 +56,9 @@
 
   html {
     scroll-behavior: smooth;
-    direction: rtl;
   }
+  /* Direction is set dynamically by LanguageProvider on <html dir>. */
+  html[lang="en"] body { font-family: 'Inter', 'Heebo', sans-serif; }
 
   body {
     @apply bg-background text-foreground font-body antialiased;
