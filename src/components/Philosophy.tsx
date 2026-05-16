@@ -1,34 +1,21 @@
 import ScrollReveal from "./ScrollReveal";
 import { useSiteContent } from "@/hooks/useSiteContent";
 
-const pillars = [
-  {
-    title: "איזון פנימי ושליטה עצמית",
-    text: "לא שליטה מכוח כוח — אלא מתוך הקשבה. כמו במסורות הלחימה הפנימיות, השליטה האמיתית נולדת מוויתור על ההתנגדות ומכוונון עצמי מדויק של מערכת העצבים.",
-  },
-  {
-    title: "נוכחות והקשבה",
-    text: "נוכחות היא לא מושג מופשט — היא יכולת פיזיולוגית. דרך תרגול מבוסס גוף, אנו מפתחים את היכולת לשהות ברגע, להאזין מבפנים, ולהגיב ולא להגיב-יתר.",
-  },
-  {
-    title: "גמישות ותנועה הרמונית",
-    text: "תנועה הרמונית היא ביטוי של מערכת עצבים מווסתת. גמישות אמיתית היא לא רק פיזית — היא היכולת לנוע בין מצבים, להתאים, ולזרום עם מה שמגיע.",
-  },
-  {
-    title: "חוסן, ויסות ומערכת העצבים",
-    text: "חוסן הוא לא הקשחה — הוא גמישות עמוקה. עבודה סומטית מושכלת מלמדת את הגוף לווסת עוררות, לשמור על בהירות תחת לחץ, ולהתאושש מהר יותר.",
-  },
-];
-
 const Philosophy = () => {
   const { t } = useSiteContent();
+
+  const pillars = [1, 2, 3, 4].map((i) => ({
+    title: t(`philosophy.pillar_${i}_title`),
+    text: t(`philosophy.pillar_${i}_text`),
+  }));
+
   return (
     <section id="philosophy" className="py-24 md:py-40 section-padding bg-card">
       <ScrollReveal>
         <div className="mb-16 md:mb-24">
           <div className="editorial-divider mb-8" />
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground">
-            {t("philosophy.title", "פילוסופיה")}
+            {t("philosophy.title")}
           </h2>
         </div>
       </ScrollReveal>
