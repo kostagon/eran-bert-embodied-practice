@@ -125,11 +125,10 @@ const BlogShowcase = () => {
         <>
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex section-padding gap-6 md:gap-8">
-              {visible.map((p, i) => (
+              {visible.map((p) => (
                 <ArticleCard
                   key={p.id}
                   post={p}
-                  featured={i === 0 && filter === "all"}
                   onOpen={() => setOpenPost(p)}
                   dateLabel={dateFmt(p.published_at)}
                   typeLabel={t(`blog.type.${p.post_type}`)}
@@ -189,9 +188,9 @@ const CarouselNav = ({
 );
 
 const ArticleCard = ({
-  post, featured, onOpen, dateLabel, typeLabel, cta,
+  post, onOpen, dateLabel, typeLabel, cta,
 }: {
-  post: Post; featured: boolean; onOpen: () => void;
+  post: Post; onOpen: () => void;
   dateLabel: string; typeLabel: string; cta: string;
 }) => {
   const isExternal = post.post_type === "external" && post.external_url;
@@ -202,12 +201,10 @@ const ArticleCard = ({
 
   return (
     <article
-      className={`group shrink-0 cursor-pointer ${
-        featured ? "basis-[88%] md:basis-[70%] lg:basis-[55%]" : "basis-[78%] md:basis-[42%] lg:basis-[30%]"
-      }`}
+      className="group shrink-0 cursor-pointer flex flex-col basis-[82%] sm:basis-[55%] md:basis-[42%] lg:basis-[32%]"
       onClick={handleClick}
     >
-      <div className="relative overflow-hidden bg-background aspect-[4/5] md:aspect-[5/6] mb-5">
+      <div className="relative overflow-hidden bg-background aspect-[4/5] mb-5">
         {post.cover_image_url ? (
           <img
             src={post.cover_image_url}
@@ -229,21 +226,15 @@ const ArticleCard = ({
         <span>{dateLabel}</span>
       </div>
 
-      <h3
-        className={`font-display text-foreground group-hover:text-accent transition-colors duration-300 text-balance ${
-          featured ? "text-2xl md:text-4xl leading-tight" : "text-xl md:text-2xl leading-snug"
-        }`}
-      >
+      <h3 className="font-display text-foreground group-hover:text-accent transition-colors duration-300 text-balance text-xl md:text-2xl leading-snug line-clamp-2 min-h-[3.5rem]">
         {post.title}
       </h3>
 
-      {post.description && (
-        <p className="font-body text-sm text-muted-foreground mt-3 leading-relaxed line-clamp-2">
-          {post.description}
-        </p>
-      )}
+      <p className="font-body text-sm text-muted-foreground mt-3 leading-relaxed line-clamp-2 min-h-[2.75rem]">
+        {post.description || "\u00A0"}
+      </p>
 
-      <span className="inline-flex items-center gap-2 mt-5 font-body text-xs tracking-widest uppercase text-foreground/70 group-hover:text-accent transition-colors duration-300">
+      <span className="inline-flex items-center gap-2 mt-5 font-body text-xs tracking-widest uppercase text-foreground/70 group-hover:text-accent transition-colors duration-300 mt-auto pt-5">
         {cta}
         <span className="block w-6 h-px bg-current group-hover:w-12 transition-all duration-500" />
       </span>
