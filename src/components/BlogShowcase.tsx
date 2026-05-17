@@ -125,11 +125,10 @@ const BlogShowcase = () => {
         <>
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex section-padding gap-6 md:gap-8">
-              {visible.map((p, i) => (
+              {visible.map((p) => (
                 <ArticleCard
                   key={p.id}
                   post={p}
-                  featured={i === 0 && filter === "all"}
                   onOpen={() => setOpenPost(p)}
                   dateLabel={dateFmt(p.published_at)}
                   typeLabel={t(`blog.type.${p.post_type}`)}
