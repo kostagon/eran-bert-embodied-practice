@@ -1,5 +1,11 @@
 // Bilingual UI dictionary. Hebrew (he) is the default; site_content (CMS) overrides he values.
 // English (en) is sourced from this file. Add new keys here to expose them in both languages.
+//
+// Voice: calm, intelligent, grounded, reflective, evidence-informed.
+// Brand: Eran Bert — Muay Thai coach. Martial arts as a laboratory for presence,
+// regulation, resilience, embodiment, and freedom of action under pressure.
+// Philosophical pillars woven through copy: Ma (間), Fudōshin (不動心),
+// Shu–Ha–Ri (守破離), "slow is smooth, smooth is fast", body-keeps-the-score (hopeful).
 
 export type Lang = "he" | "en";
 
@@ -16,62 +22,62 @@ export const translations: Record<Lang, Dict> = {
     "nav.brand": "ERAN BERT",
     "nav.about": "אודות",
     "nav.philosophy": "פילוסופיה",
-    "nav.services": "שירותים",
+    "nav.services": "אימון",
     "nav.programs": "תוכניות",
     "nav.blog": "כתיבה",
     "nav.contact": "צור קשר",
     "nav.menu": "תפריט",
 
     // Hero
-    "hero.title": "ערן ברט — תרגול, תנועה, לחימה, מודעות",
-    "hero.subtitle": "ללמוד להתעגן בעצמי — תנועה, נשימה ולחימה ככלים לחוסן, ויסות ונוכחות.",
-    "hero.description": "אימון, ליווי והכשרה המשלבים אומנויות לחימה, עבודה סומטית ומודעות גופנית.",
+    "hero.title": "מואיי תאי כמעבדה לנוכחות, ויסות וחירות תחת לחץ",
+    "hero.subtitle": "אימון לחימה שמלמד את הגוף לנשום, להאזין ולבחור — במקום להגיב.",
+    "hero.description": "אימון, ליווי והכשרה המשלבים מואיי תאי, תנועה ומדעי מערכת העצבים — לפיתוח מיומנות, חוסן וחופש פעולה בחיים היומיומיים.",
     "hero.cta_primary": "צור קשר",
-    "hero.cta_secondary": "לתוכניות והכשרות",
+    "hero.cta_secondary": "תוכניות אימון",
 
     // Intro
-    "intro.title": "הקשר בין גוף לתודעה הוא לא רעיון — הוא חוויה",
-    "intro.body_1": "במשך שנים של תרגול הבנתי שמערכת העצבים היא המורה הגדול ביותר שלנו. תנועה, נשימה ולחימה הן לא רק כלים טכניים — הן דרך להקשיב לעצמנו, לווסת את הפנים, ולגלות יציבות שלא תלויה בנסיבות.",
-    "intro.body_2": "אני עובד עם אנשים שמחפשים עומק — אנשי ביצוע, מטפלים, מדריכים ואנשים שפשוט מבקשים לחזור הביתה, לגוף. העבודה משלבת מסורות לחימה עתיקות עם הבנה מודרנית של טראומה, ויסות ומודעות גופנית.",
-    "intro.quote": "״הניצחון האמיתי הוא הניצחון על עצמך״",
+    "intro.title": "המרחב שבין גירוי לתגובה — שם מתחילה החירות",
+    "intro.body_1": "מואיי תאי הוא לא רק טכניקה של מכות ובעיטות. בסטודיו, הוא הופך למרחב תרגול שבו אנחנו לומדים להישאר נוכחים תחת לחץ, לווסת עוררות, ולבחור תגובה במקום להגיב באוטומט. המיומנויות שמתפתחות על הפדים נמשכות הביתה — להורות, ליחסים, להובלה ולחיים תחת עומס.",
+    "intro.body_2": "העבודה מבוססת על למידה הדרגתית בנוסח שו-הא-רי: קודם לומדים את הצורה, אחר כך מבינים את העקרונות, ובסוף מבטאים אותם בחופשיות. אטיות שהיא חלקה הופכת למהירות. דיוק קודם לכוח. מודעות קודמת לעוצמה.",
+    "intro.quote": "״חופש מתחיל במרחב שבין מה שקורה לבין איך שאנחנו מגיבים״",
 
     // Philosophy
-    "philosophy.title": "פילוסופיה",
-    "philosophy.pillar_1_title": "איזון פנימי ושליטה עצמית",
-    "philosophy.pillar_1_text": "לא שליטה מכוח כוח — אלא מתוך הקשבה. השליטה האמיתית נולדת מוויתור על ההתנגדות ומכוונון מדויק של מערכת העצבים.",
-    "philosophy.pillar_2_title": "נוכחות והקשבה",
-    "philosophy.pillar_2_text": "נוכחות היא יכולת פיזיולוגית. דרך תרגול מבוסס גוף, אנו מפתחים יכולת לשהות ברגע, להאזין מבפנים, ולהגיב בלי להגיב-יתר.",
-    "philosophy.pillar_3_title": "גמישות ותנועה הרמונית",
-    "philosophy.pillar_3_text": "תנועה הרמונית היא ביטוי של מערכת עצבים מווסתת. גמישות אמיתית היא היכולת לנוע בין מצבים ולזרום עם מה שמגיע.",
-    "philosophy.pillar_4_title": "חוסן וויסות",
-    "philosophy.pillar_4_text": "חוסן הוא לא הקשחה — הוא גמישות עמוקה. עבודה סומטית מלמדת את הגוף לווסת עוררות ולהתאושש מהר יותר.",
+    "philosophy.title": "עקרונות מנחים",
+    "philosophy.pillar_1_title": "Ma (間) — המרחב שבין גירוי לתגובה",
+    "philosophy.pillar_1_text": "התרגול מפתח את היכולת לעצור רגע לפני שמגיבים — להאזין, לווסת ולבחור. החירות הזו נמשכת מהאימון אל ההורות, היחסים והעבודה תחת לחץ.",
+    "philosophy.pillar_2_title": "Fudōshin (不動心) — תודעה שאינה מתערערת",
+    "philosophy.pillar_2_text": "לא קשיחות אלא יציבות. נשארים מחוברים לעצמנו גם בתוך אי-ודאות, עייפות, אי-נוחות וכישלון. האימון הוא מרחב בטוח לתרגל זאת.",
+    "philosophy.pillar_3_title": "Shu–Ha–Ri (守破離) — מצורה לחירות",
+    "philosophy.pillar_3_text": "תחילה לומדים את הצורה. אחר כך מבינים מדוע היא עובדת. ולבסוף הופכים אותה לאישית, מסתגלת וטבעית. למידה רצינית בלי קיצורי דרך.",
+    "philosophy.pillar_4_title": "אטי שהוא חלק — הופך מהיר",
+    "philosophy.pillar_4_text": "מהירות נולדת מאיכות, לא מדחיפה. רוגע, תיאום, נשימה וארגון של מערכת העצבים יוצרים פעולה מדויקת — גם כשהקצב עולה.",
 
     // Services
-    "services.title": "שירותים",
+    "services.title": "מסגרות אימון",
     "services.s1_title": "אימון אישי",
-    "services.s1_text": "מסלול מותאם אישית המשלב תנועה, נשימה ועבודה סומטית — לפיתוח חוסן, ויסות ומודעות עצמית מעמיקה.",
-    "services.s2_title": "סדנאות קבוצתיות",
-    "services.s2_text": "סדנאות חוויתיות המשלבות לחימה, תרגול סומטי ועבודת מודעות לקבוצות וארגונים.",
-    "services.s3_title": "הכשרות מקצועיות",
-    "services.s3_text": "תוכניות הכשרה למדריכים ומטפלים המבקשים לשלב גישות גופניות בעבודתם.",
-    "services.s4_title": "הרצאות וקורסים",
-    "services.s4_text": "הרצאות וקורסים בנושאי גוף-נפש, ויסות, חוסן ומנהיגות מגולמת.",
+    "services.s1_text": "מסלול מותאם המשלב מואיי תאי, עבודת נשימה ועקרונות סומטיים — לפיתוח טכניקה נקייה, ויסות עוררות ובחירה תחת לחץ.",
+    "services.s2_title": "אימון קבוצתי",
+    "services.s2_text": "קבוצות קטנות בקצב מדוד. עובדים על יסודות, תזמון ומגע — בסביבה תומכת שמאפשרת ללמוד מבלי לאבד נוכחות.",
+    "services.s3_title": "הכשרת מדריכים",
+    "services.s3_text": "תוכנית למדריכים ומטפלים המבקשים לשלב כלים גופניים, עקרונות למידה ועבודה סומטית בעבודתם.",
+    "services.s4_title": "הרצאות וסדנאות",
+    "services.s4_text": "סדנאות חוויתיות לארגונים וצוותים — נוכחות, ויסות וקבלת החלטות תחת לחץ דרך עבודת גוף.",
     "services.s5_title": "ריטריטים",
     "services.s5_text": "צלילות עומק של מספר ימים — תרגול, שקט, טבע ואינטגרציה.",
 
     // Programs
-    "programs.title": "תוכניות והכשרות",
-    "programs.subtitle": "תוכניות נבחרות, כל אחת מעוצבת בקפידה כדי לתת מענה לצורך ייחודי.",
+    "programs.title": "תוכניות אימון",
+    "programs.subtitle": "מסלולים נבחרים, כל אחד בנוי כדי לפגוש שלב אחר במסע התרגול.",
     "programs.cta": "לפרטים והרשמה",
 
     // Performance
-    "performance.title": "ביצועים תחת לחץ",
-    "performance.body": "אנשים שחיים בסביבות עתירות לחץ זקוקים ליותר מטכניקה — הם זקוקים לאינטליגנציה של מערכת העצבים. בהירות, ויסות עוררות ודיוק גם כשהלחץ עולה.",
-    "performance.footnote": "העבודה משלבת תרגול פיזי, ויסות נשימתי ואסטרטגיות מנטליות ליציבות פנימית שמאפשרת ביצוע מדויק.",
+    "performance.title": "ביצוע תחת לחץ",
+    "performance.body": "אנשים שעובדים תחת עומס לא צריכים עוד טכניקה — הם צריכים מערכת עצבים שיודעת להישאר מאורגנת. בהירות, ויסות עוררות והחלטה מדויקת גם כשהדופק עולה.",
+    "performance.footnote": "האימון מחבר בין תרגול גופני, נשימה ואסטרטגיות מנטליות, כדי לבנות יציבות פנימית שמאפשרת פעולה נקייה ברגע האמת.",
     "performance.aud_1": "אנשי ביצוע",
     "performance.aud_2": "ספורטאים",
-    "performance.aud_3": "יחידות עילית",
-    "performance.aud_4": "מנהלים",
+    "performance.aud_3": "יחידות מבצעיות",
+    "performance.aud_4": "מנהלים והורים",
     "performance.aud_5": "מגיבים ראשונים",
 
     // Retreats
@@ -87,7 +93,7 @@ export const translations: Record<Lang, Dict> = {
 
     // Blog
     "blog.title": "כתיבה ומחשבות",
-    "blog.subtitle": "מאמרים, פודקאסטים ושיחות על תרגול, גוף ונוכחות.",
+    "blog.subtitle": "מאמרים, פודקאסטים ושיחות על תרגול, גוף, למידה ונוכחות.",
     "blog.empty": "תוכן יפורסם בקרוב.",
     "blog.read": "קריאה",
     "blog.listen": "האזנה",
@@ -105,7 +111,7 @@ export const translations: Record<Lang, Dict> = {
 
     // Contact
     "contact.title": "צור קשר",
-    "contact.subtitle": "לאימון אישי, סדנאות, הכשרות או שיתופי פעולה — אשמח לשמוע.",
+    "contact.subtitle": "לאימון אישי, אימון קבוצתי, הכשרות או שיתופי פעולה — אשמח לשמוע.",
     "contact.email": "info@eranbert.com",
     "contact.cta": "שליחה",
     "contact.name": "שם",
@@ -114,7 +120,7 @@ export const translations: Record<Lang, Dict> = {
 
     // Footer
     "footer.brand": "ERAN BERT",
-    "footer.tagline": "תרגול · תנועה · לחימה · מודעות",
+    "footer.tagline": "מואיי תאי · נוכחות · ויסות · גילום",
     "footer.rights": "כל הזכויות שמורות",
 
     // Language
@@ -126,62 +132,62 @@ export const translations: Record<Lang, Dict> = {
     "nav.brand": "ERAN BERT",
     "nav.about": "About",
     "nav.philosophy": "Philosophy",
-    "nav.services": "Services",
+    "nav.services": "Training",
     "nav.programs": "Programs",
     "nav.blog": "Writing",
     "nav.contact": "Contact",
     "nav.menu": "Menu",
 
     // Hero
-    "hero.title": "Eran Bert — Practice, Movement, Martial Arts, Awareness",
-    "hero.subtitle": "Learning to anchor in the self — movement, breath and martial arts as tools for resilience, regulation and presence.",
-    "hero.description": "Training, mentoring and education integrating martial arts, somatic work and embodied awareness.",
+    "hero.title": "Muay Thai as a laboratory for presence, regulation, and freedom under pressure",
+    "hero.subtitle": "A martial practice that teaches the body to breathe, listen, and choose — instead of react.",
+    "hero.description": "Training, mentoring and education weaving Muay Thai, movement and nervous-system science — to develop skill, resilience and freedom of action in everyday life.",
     "hero.cta_primary": "Get in touch",
-    "hero.cta_secondary": "Programs & trainings",
+    "hero.cta_secondary": "Training programs",
 
     // Intro
-    "intro.title": "The bond between body and mind is not a concept — it is an experience",
-    "intro.body_1": "Through years of practice I came to see that the nervous system is our deepest teacher. Movement, breath and martial arts are not only technical tools — they are a way of listening inward, of regulating from within, and of finding stability that does not depend on circumstance.",
-    "intro.body_2": "I work with people seeking depth — performers, therapists, instructors, and those simply returning home to their body. The work weaves ancient martial traditions with a modern understanding of trauma, regulation and embodied awareness.",
-    "intro.quote": "“True victory is the victory over oneself.”",
+    "intro.title": "The space between stimulus and response — where freedom begins",
+    "intro.body_1": "Muay Thai is more than punches and kicks. In the studio it becomes a place to practice staying present under pressure, regulating arousal, and choosing a response instead of reacting on autopilot. The skills we build on the pads travel home — into parenting, relationships, leadership, and life under load.",
+    "intro.body_2": "The work follows a Shu–Ha–Ri arc: first we learn the form, then we understand the principles, and finally we make them our own. Slow becomes smooth, and smooth becomes fast. Precision before force. Awareness before intensity.",
+    "intro.quote": "“Freedom begins in the space between what happens and how we respond.”",
 
     // Philosophy
-    "philosophy.title": "Philosophy",
-    "philosophy.pillar_1_title": "Inner balance & self-mastery",
-    "philosophy.pillar_1_text": "Not control through force — but through listening. True mastery is born from releasing resistance and finely tuning the nervous system.",
-    "philosophy.pillar_2_title": "Presence & listening",
-    "philosophy.pillar_2_text": "Presence is a physiological capacity. Through body-based practice we cultivate the ability to stay in the moment, listen inward, and respond without over-reacting.",
-    "philosophy.pillar_3_title": "Flexibility & harmonious movement",
-    "philosophy.pillar_3_text": "Harmonious movement expresses a regulated nervous system. Real flexibility is the ability to move between states and flow with what arrives.",
-    "philosophy.pillar_4_title": "Resilience & regulation",
-    "philosophy.pillar_4_text": "Resilience is not hardening — it is deep flexibility. Somatic work teaches the body to regulate arousal and recover faster.",
+    "philosophy.title": "Guiding principles",
+    "philosophy.pillar_1_title": "Ma (間) — the space between stimulus and response",
+    "philosophy.pillar_1_text": "Training builds the capacity to pause — to observe, regulate and choose before reacting. That freedom carries from the gym into parenting, relationships, and work under load.",
+    "philosophy.pillar_2_title": "Fudōshin (不動心) — the unshaken mind",
+    "philosophy.pillar_2_text": "Not rigidity, but stability. Staying connected to ourselves inside uncertainty, fatigue, discomfort and failure. The training environment is a safe place to rehearse this.",
+    "philosophy.pillar_3_title": "Shu–Ha–Ri (守破離) — from form to freedom",
+    "philosophy.pillar_3_text": "First we follow the form. Then we understand the principles. Finally we express them freely — adaptive, personal, natural. Serious learning, without shortcuts.",
+    "philosophy.pillar_4_title": "Slow is smooth, smooth is fast",
+    "philosophy.pillar_4_text": "Speed emerges from quality, not from rushing. Relaxation, timing, breath and nervous-system organization produce precise action — even as the tempo rises.",
 
     // Services
-    "services.title": "Services",
+    "services.title": "Training formats",
     "services.s1_title": "One-on-one training",
-    "services.s1_text": "A personal path integrating movement, breath and somatic work — for resilience, regulation and deep self-awareness.",
-    "services.s2_title": "Group workshops",
-    "services.s2_text": "Experiential workshops blending martial arts, somatic practice and awareness work for groups and organizations.",
-    "services.s3_title": "Professional trainings",
-    "services.s3_text": "Programs for instructors and therapists who wish to integrate embodied approaches into their work.",
-    "services.s4_title": "Lectures & courses",
-    "services.s4_text": "Talks and structured courses on body–mind, regulation, resilience and embodied leadership.",
+    "services.s1_text": "A tailored path integrating Muay Thai, breath work and somatic principles — for clean technique, arousal regulation, and the capacity to choose under pressure.",
+    "services.s2_title": "Group training",
+    "services.s2_text": "Small groups at a measured pace. Fundamentals, timing, contact — in a supportive environment that lets people learn without losing presence.",
+    "services.s3_title": "Coach education",
+    "services.s3_text": "A program for instructors and therapists who want to weave embodied tools, learning principles and somatic work into their practice.",
+    "services.s4_title": "Talks & workshops",
+    "services.s4_text": "Experiential sessions for teams and organizations — presence, regulation and decision-making under pressure through body-based work.",
     "services.s5_title": "Retreats",
     "services.s5_text": "Multi-day deep dives — practice, silence, nature and integration.",
 
     // Programs
-    "programs.title": "Programs & trainings",
-    "programs.subtitle": "Selected programs, each crafted to meet a specific need.",
+    "programs.title": "Training programs",
+    "programs.subtitle": "Selected tracks, each designed to meet a different stage of the practice.",
     "programs.cta": "Details & registration",
 
     // Performance
     "performance.title": "Performance under pressure",
-    "performance.body": "People who live in high-pressure environments need more than technique — they need nervous-system intelligence. Clarity, arousal regulation and precision even as the load rises.",
-    "performance.footnote": "The work weaves physical practice, breath regulation and mental strategies into the kind of inner stability that allows precise performance.",
+    "performance.body": "People who work under load don't need more technique — they need a nervous system that stays organized. Clarity, arousal regulation and precise decisions as the heart rate climbs.",
+    "performance.footnote": "The work weaves physical practice, breath and mental strategy into the kind of inner stability that allows clean action in the real moment.",
     "performance.aud_1": "Performers",
     "performance.aud_2": "Athletes",
-    "performance.aud_3": "Elite units",
-    "performance.aud_4": "Leaders",
+    "performance.aud_3": "Operational units",
+    "performance.aud_4": "Leaders & parents",
     "performance.aud_5": "First responders",
 
     // Retreats
@@ -197,7 +203,7 @@ export const translations: Record<Lang, Dict> = {
 
     // Blog
     "blog.title": "Writing & thoughts",
-    "blog.subtitle": "Essays, podcasts and conversations on practice, body and presence.",
+    "blog.subtitle": "Essays, podcasts and conversations on practice, body, learning and presence.",
     "blog.empty": "Content coming soon.",
     "blog.read": "Read",
     "blog.listen": "Listen",
@@ -215,7 +221,7 @@ export const translations: Record<Lang, Dict> = {
 
     // Contact
     "contact.title": "Get in touch",
-    "contact.subtitle": "For one-on-one training, workshops, trainings or collaborations — I'd love to hear from you.",
+    "contact.subtitle": "For one-on-one training, group classes, coach education or collaborations — I'd love to hear from you.",
     "contact.email": "info@eranbert.com",
     "contact.cta": "Send",
     "contact.name": "Name",
@@ -224,7 +230,7 @@ export const translations: Record<Lang, Dict> = {
 
     // Footer
     "footer.brand": "ERAN BERT",
-    "footer.tagline": "Practice · Movement · Martial arts · Awareness",
+    "footer.tagline": "Muay Thai · Presence · Regulation · Embodiment",
     "footer.rights": "All rights reserved",
 
     // Language
