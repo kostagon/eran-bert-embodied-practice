@@ -20,11 +20,11 @@ const Philosophy = () => {
         </div>
       </ScrollReveal>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-border">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-border items-stretch">
         {pillars.map((pillar, i) => (
-          <ScrollReveal key={i} delay={i * 0.12}>
-            <div className="bg-card p-8 md:p-12 lg:p-16 min-h-[280px] flex flex-col justify-between group">
-              <div>
+          <ScrollReveal key={i} delay={i * 0.12} className="h-full">
+            <div className="bg-card p-8 md:p-12 lg:p-16 min-h-[280px] h-full flex flex-col group">
+              <div className="flex-1">
                 <h3 className="font-display text-xl md:text-2xl text-foreground mb-4 group-hover:text-accent transition-colors duration-500">
                   {pillar.title}
                 </h3>
@@ -32,7 +32,7 @@ const Philosophy = () => {
                   {pillar.text}
                 </p>
               </div>
-              <div className="mt-8 w-8 h-px bg-accent/30 group-hover:w-16 transition-all duration-700" />
+              <div className="mt-8 w-8 h-px bg-accent/30 group-hover:w-16 transition-all duration-700 shrink-0" />
             </div>
           </ScrollReveal>
         ))}
