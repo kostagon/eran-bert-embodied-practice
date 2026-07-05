@@ -3,6 +3,9 @@ import Hero from "@/components/Hero";
 import Intro from "@/components/Intro";
 import Philosophy from "@/components/Philosophy";
 import Services from "@/components/Services";
+import Courses from "@/components/Courses";
+import SomaticPractice from "@/components/SomaticPractice";
+import Regulation from "@/components/Regulation";
 import Programs from "@/components/Programs";
 import Performance from "@/components/Performance";
 import BlogShowcase from "@/components/BlogShowcase";
@@ -18,8 +21,11 @@ const Index = () => {
       <Intro />
       <Philosophy />
       <Services />
-      <Programs />
+      <Courses />
+      <SomaticPractice />
+      <Regulation />
       <Performance />
+      <Programs />
       <BlogShowcase />
       <Retreats />
       <Contact />
@@ -29,3 +35,4 @@ const Index = () => {
 };
 
 export default Index;
+

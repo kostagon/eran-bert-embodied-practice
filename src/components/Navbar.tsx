@@ -12,10 +12,14 @@ const Navbar = () => {
     { label: t("nav.about"), href: "/#intro" },
     { label: t("nav.philosophy"), href: "/#philosophy" },
     { label: t("nav.services"), href: "/#services" },
+    { label: t("nav.courses"), href: "/#courses" },
+    { label: t("nav.somatic"), href: "/#somatic" },
+    { label: t("nav.regulation"), href: "/#regulation" },
     { label: t("nav.programs"), href: "/#programs" },
     { label: t("nav.blog"), href: "/#writing" },
     { label: t("nav.contact"), href: "/#contact" },
   ];
+
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
@@ -34,25 +38,26 @@ const Navbar = () => {
           {t("nav.brand")}
         </a>
 
-        <div className="hidden md:flex items-center gap-10">
+        <div className="hidden lg:flex items-center gap-7">
           {navItems.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="text-sm font-body text-muted-foreground hover:text-foreground transition-colors duration-300"
+              className="text-sm font-body text-muted-foreground hover:text-foreground transition-colors duration-300 whitespace-nowrap"
             >
               {item.label}
             </a>
           ))}
         </div>
 
-        <div className="hidden md:flex items-center">
+        <div className="hidden lg:flex items-center">
+
           <LanguageSwitcher />
         </div>
 
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden flex flex-col gap-1.5 p-2"
+          className="lg:hidden flex flex-col gap-1.5 p-2"
           aria-label={t("nav.menu")}
         >
           <span className={`block w-5 h-px bg-foreground transition-transform duration-300 ${mobileOpen ? "rotate-45 translate-y-[3.5px]" : ""}`} />
@@ -68,7 +73,7 @@ const Navbar = () => {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="md:hidden bg-background/95 backdrop-blur-md border-b border-border/50 overflow-hidden"
+            className="lg:hidden bg-background/95 backdrop-blur-md border-b border-border/50 overflow-hidden"
           >
             <div className="section-padding py-8 flex flex-col gap-6">
               {navItems.map((item) => (

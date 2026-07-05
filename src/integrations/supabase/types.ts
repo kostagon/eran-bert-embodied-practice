@@ -105,6 +105,7 @@ export type Database = {
         Row: {
           key: string
           label: string | null
+          lang: string
           section: string | null
           updated_at: string
           value: string
@@ -112,6 +113,7 @@ export type Database = {
         Insert: {
           key: string
           label?: string | null
+          lang?: string
           section?: string | null
           updated_at?: string
           value?: string
@@ -119,6 +121,7 @@ export type Database = {
         Update: {
           key?: string
           label?: string | null
+          lang?: string
           section?: string | null
           updated_at?: string
           value?: string

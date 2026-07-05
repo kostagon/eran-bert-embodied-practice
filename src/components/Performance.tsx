@@ -4,10 +4,10 @@ import { useSiteContent } from "@/hooks/useSiteContent";
 
 const Performance = () => {
   const { t } = useSiteContent();
-  const audiences = [1, 2, 3, 4, 5].map((i) => t(`performance.aud_${i}`));
+  const audiences = [1, 2, 3, 4].map((i) => t(`performance.aud_${i}`));
 
   return (
-    <section className="py-24 md:py-40 section-padding">
+    <section id="elite-units" className="py-24 md:py-40 section-padding">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
         <div className="lg:col-span-5">
           <ScrollReveal>
@@ -24,6 +24,12 @@ const Performance = () => {
         <div className="lg:col-span-7">
           <ScrollReveal><div className="editorial-divider mb-8" /></ScrollReveal>
 
+          <ScrollReveal delay={0.05}>
+            <p className="font-body text-xs tracking-[0.3em] uppercase text-accent mb-4">
+              {t("performance.subtitle")}
+            </p>
+          </ScrollReveal>
+
           <ScrollReveal delay={0.1}>
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl text-foreground mb-6">
               {t("performance.title")}
@@ -35,6 +41,7 @@ const Performance = () => {
               {t("performance.body")}
             </p>
           </ScrollReveal>
+
 
           <ScrollReveal delay={0.3}>
             <div className="flex flex-wrap gap-3 mb-10">
