@@ -7,7 +7,8 @@ const Retreats = () => {
   const words = [1, 2, 3, 4, 5, 6].map((i) => t(`retreats.word_${i}`));
 
   return (
-    <section className="py-24 md:py-40 overflow-hidden">
+    <section id="retreats" className="py-24 md:py-40 overflow-hidden">
+
       <ScrollReveal>
         <div className="section-padding mb-16 md:mb-24">
           <div className="overflow-hidden">
