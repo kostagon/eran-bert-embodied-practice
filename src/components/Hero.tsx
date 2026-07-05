@@ -43,13 +43,27 @@ const Hero = () => {
           </motion.p>
 
           <motion.p
-            className="font-body text-base text-muted-foreground max-w-xl mb-10 leading-relaxed"
+            className="font-body text-base text-muted-foreground max-w-xl mb-8 leading-relaxed"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.65, ease: [0.22, 1, 0.36, 1] }}
           >
             {t("hero.description")}
           </motion.p>
+
+          <motion.div
+            className="flex flex-col gap-2 mb-10 max-w-xl"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.75, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <p className="font-display text-sm md:text-base text-foreground/70 italic">
+              {t("hero.quote_1")}
+            </p>
+            <p className="font-display text-sm md:text-base text-foreground/70 italic">
+              {t("hero.quote_2")}
+            </p>
+          </motion.div>
 
           <motion.div
             className="flex flex-wrap gap-4"
@@ -71,6 +85,7 @@ const Hero = () => {
               {t("hero.cta_secondary")}
             </a>
           </motion.div>
+
         </div>
       </div>
     </section>
