@@ -23,7 +23,7 @@ const Auth = () => {
   const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const parsed = schema.safeParse({ email, password });
-    if (!parsed.success) { toast.error(parsed.error.errors[0].message); return; }
+    if (!parsed.success) { toast.error(parsed.error.issues[0].message); return; }
     setSubmitting(true);
     try {
       if (mode === "signup") {
