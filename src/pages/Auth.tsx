@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, useSearchParams, Link } from "react-router-dom";
 import { z } from "zod";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
@@ -12,13 +12,16 @@ const schema = z.object({
 
 const Auth = () => {
   const nav = useNavigate();
+  const [params] = useSearchParams();
+  const rawNext = params.get("next") ?? "";
+  const nextPath = rawNext.startsWith("/") && !rawNext.startsWith("//") ? rawNext : "/admin";
   const { user, loading } = useAuth();
   const [mode, setMode] = useState<"signin" | "signup">("signin");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [submitting, setSubmitting] = useState(false);
 
-  useEffect(() => { if (!loading && user) nav("/admin"); }, [user, loading, nav]);
+  useEffect(() => { if (!loading && user) nav(nextPath); }, [user, loading, nav, nextPath]);
 
   const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
