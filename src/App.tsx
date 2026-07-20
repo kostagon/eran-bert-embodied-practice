@@ -9,6 +9,7 @@ import { SiteContentProvider } from "@/hooks/useSiteContent";
 import Index from "./pages/Index.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import Auth from "./pages/Auth.tsx";
+import OAuthConsent from "./pages/OAuthConsent.tsx";
 import AdminContent from "./pages/admin/AdminContent.tsx";
 import AdminPrograms from "./pages/admin/AdminPrograms.tsx";
 import AdminBlog from "./pages/admin/AdminBlog.tsx";
@@ -30,6 +31,7 @@ const App = () => (
                 <Route path="/blog" element={<BlogIndex />} />
                 <Route path="/blog/:slug" element={<BlogPostPage />} />
                 <Route path="/auth" element={<Auth />} />
+                <Route path="/.lovable/oauth/consent" element={<OAuthConsent />} />
                 <Route path="/admin" element={<AdminContent />} />
                 <Route path="/admin/programs" element={<AdminPrograms />} />
                 <Route path="/admin/blog" element={<AdminBlog />} />
