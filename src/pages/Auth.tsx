@@ -32,14 +32,14 @@ const Auth = () => {
       if (mode === "signup") {
         const { error } = await supabase.auth.signUp({
           email, password,
-          options: { emailRedirectTo: `${window.location.origin}/admin` },
+          options: { emailRedirectTo: `${window.location.origin}${nextPath}` },
         });
         if (error) throw error;
         toast.success("נרשמת בהצלחה. בדוק/י אימייל לאישור.");
       } else {
         const { error } = await supabase.auth.signInWithPassword({ email, password });
         if (error) throw error;
-        nav("/admin");
+        nav(nextPath);
       }
     } catch (err: any) {
       toast.error(err.message || "שגיאה");
