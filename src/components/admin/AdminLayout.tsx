@@ -6,7 +6,9 @@ const tabs = [
   { to: "/admin", label: "תוכן האתר" },
   { to: "/admin/programs", label: "תוכניות" },
   { to: "/admin/blog", label: "כתיבה" },
+  { to: "/admin/typography", label: "טיפוגרפיה" },
 ];
+
 
 const AdminLayout = ({ children }: { children: ReactNode }) => {
   const { user, isAdmin, loading, signOut } = useAuth();
