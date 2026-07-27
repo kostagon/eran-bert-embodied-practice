@@ -46,7 +46,13 @@
     --warm-gray: 30 5% 55%;
     --charcoal: 220 15% 15%;
     --charcoal-light: 220 10% 30%;
+
+    /* Typography — managed from the CMS (Typography manager).
+       Hebrew-safe fallbacks are always appended. */
+    --font-heading: 'Frank Ruhl Libre', 'David Libre', Georgia, serif;
+    --font-body: 'Heebo', 'Assistant', 'Arial Hebrew', system-ui, sans-serif;
   }
+
 }
 
 @layer base {
@@ -58,13 +64,21 @@
     scroll-behavior: smooth;
   }
   /* Direction is set dynamically by LanguageProvider on <html dir>. */
-  html[lang="en"] body { font-family: 'Inter', 'Heebo', sans-serif; }
 
   body {
     @apply bg-background text-foreground font-body antialiased;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+
+  input,
+  textarea,
+  select,
+  button,
+  label {
+    font-family: inherit;
+  }
+
 
   ::selection {
     background: hsl(95 12% 42% / 0.2);
