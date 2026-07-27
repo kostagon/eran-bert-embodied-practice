@@ -14,9 +14,11 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['"Frank Ruhl Libre"', 'serif'],
-        body: ['"Heebo"', 'sans-serif'],
+        display: ["var(--font-heading)"],
+        body: ["var(--font-body)"],
+        heading: ["var(--font-heading)"],
       },
+
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
