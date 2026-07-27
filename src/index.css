@@ -102,10 +102,11 @@
 
 @layer utilities {
   .font-display {
-    font-family: 'Frank Ruhl Libre', serif;
+    font-family: var(--font-heading);
   }
 
   .font-body {
-    font-family: 'Heebo', sans-serif;
+    font-family: var(--font-body);
   }
 }
+
